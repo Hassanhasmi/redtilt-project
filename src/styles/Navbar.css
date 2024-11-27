@@ -1,0 +1,161 @@
+/* Navbar Container */
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    backdrop-filter: blur(10px); 
+}
+
+/* Company Logo */
+.compny_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.R_text{
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+
+.logo-link {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+/* Web Pages (for desktop) */
+.web_pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 30px;
+}
+
+/* Link styling */
+
+.web_pages .Home, .web_pages .Services, .web_pages .Blogs, .web_pages .Contactus {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none; 
+    color: var(--text-color); 
+}
+
+.web_pages .Home:hover,
+.web_pages .Services:hover,
+.web_pages .Blogs:hover,
+.web_pages .Contactus:hover {
+    background-color:red; 
+    color: white; 
+}
+
+/* Theme and Start Project */
+.themechange_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    gap: 20px;
+}
+
+.theme_icon,
+.menu_icon {
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.theme_icon:hover,
+.menu_icon:hover {
+    background-color:red; 
+    color: white;
+}
+
+.project_text {
+    display: block; /* Visible on desktop */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.project_text:hover {
+    background-color:red; 
+    color: white;
+}
+
+/* Mobile Menu Dropdown */
+.mobile_menu {
+    display: flex;
+    flex-direction:row;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    z-index: 10;
+}
+
+.mobile_menu .Home, .mobile_menu .Services, .mobile_menu .Blogs, .mobile_menu .Contactus {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+    color: var(--text-color); 
+    
+}
+
+.mobile_menu .Home:hover,
+.mobile_menu .Services:hover,
+.mobile_menu .Blogs:hover,
+.mobile_menu .Contactus:hover {
+    background-color:red;
+    color: white; 
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .web_pages {
+        display: none; /* Hide web pages on mobile */
+    }
+
+    .menu_icon {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    .project_text {
+        display: none; /* Hide "Start a Project" on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu_icon {
+        display: none; /* Hide menu icon on desktop */
+    }
+
+    .project_text {
+        display: block; /* Show "Start a Project" on desktop */
+    }
+}
